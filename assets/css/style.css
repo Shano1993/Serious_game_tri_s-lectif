@@ -30,7 +30,11 @@ h2 {
     text-align: center;
     text-decoration-line: underline;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+#wasteTitle {
+    margin-bottom: 5rem;
 }
 
 p {
@@ -40,7 +44,6 @@ p {
 #game {
     width: 90%;
     border: 0.1rem solid black;
-    height: 85rem;
     margin: 0 auto;
     background-color: rgba(173, 255, 47, 0.52);
     display: flex;
@@ -51,21 +54,34 @@ p {
 
 #waste {
     width: 80%;
-    height: 20%;
+    height: 25%;
     display: flex;
     flex-wrap: wrap;
+    border: 0.5rem solid black;
     justify-content: space-around;
     align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#rule {
+    width: 50%;
+}
+
+#rules {
+    padding: 1rem;
 }
 
 .waste_item {
-    border: 0.1rem solid black;
-    width: 25%;
+    width: 20%;
     height: 25%;
     font-size: 1.8rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    border: 0.1rem solid black;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 #trashcan {
@@ -75,6 +91,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .transhcans {
@@ -83,12 +100,17 @@ p {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.44);
     border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 #comment {
     border: 0.1rem solid black;
     width: 50%;
     height: 20%;
+    margin-top: 5rem;
 }
 
 #yellow {
@@ -154,3 +176,63 @@ input[type=text] {
     color: white;
 }
 
+#explication {
+    color: #720000;
+}
+
+#false {
+    color: red;
+}
+
+.comments {
+    margin-left: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1180px){
+    #yellow, #green, #blue, #brown {
+        font-size: 11rem;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    #yellow, #green, #blue, #brown {
+        font-size: 11rem;
+    }
+    #waste {
+        flex-direction: column;
+    }
+    #rule {
+        width: 100%;
+    }
+    #rule > h2 {
+        margin-bottom: 2rem;
+    }
+    .waste_item {
+        width: 50%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 950px){
+    #yellow, #green, #blue, #brown {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (max-width: 735px){
+    #yellow, #green, #blue, #brown {
+        font-size: 8rem;
+    }
+    .transhcans {
+        width: 35%;
+        margin-bottom: 1.5rem;
+    }
+    #comment {
+        width: 80%;
+    }
+    .waste_item {
+        width: 70%;
+    }
+}

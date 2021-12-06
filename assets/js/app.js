@@ -76,6 +76,7 @@ let array = [
 ];
 let score = 1;
 let incorrect = 1;
+let explication = document.getElementById('explication');
 
 let wasteItem = document.getElementsByClassName('waste_item');
 
@@ -101,24 +102,30 @@ document.getElementById('button').addEventListener("click", function () {
             }
             if (score === 11) {
                 game.style.display = 'none';
-                document.getElementById('won').innerHTML = "Tu es un vrai ECOLO !"
+                document.getElementById('again').style.display = "block";
+                document.getElementById('won').style.display = "block";
+                document.getElementById('won').innerHTML = "Tu es un vrai ECOLO !";
             }
         }
         else {
+            incorrectYellow();
+            incorrectGreen();
+            incorrectBlue();
+            incorrectBrown();
             inputYellow.value = ""; // delete the content of the input
             inputGreen.value = ""; // delete the content of the input
             inputBlue.value = ""; // delete the content of the input
             inputBrown.value = ""; // delete the content of the input
             document.getElementById('false').innerHTML = " " + incorrect++;
+
+            for (let i = 0; i < wasteItem.length; i++) {
+                wasteItem[i].innerHTML = array[Math.floor(Math.random() * array.length)];
+            }
             if (incorrect === 11) {
                 game.style.display = 'none';
                 document.getElementById('again').style.display = "block";
                 document.getElementById('won').style.display = "block";
-                document.getElementById('won').innerHTML = "Tu ne sais pas trier tes déchets !"
-            }
-
-            for (let i = 0; i < wasteItem.length; i++) {
-                wasteItem[i].innerHTML = array[Math.floor(Math.random() * array.length)];
+                document.getElementById('won').innerHTML = "Tu ne sais pas trier tes déchets !";
             }
         }
     }
@@ -134,7 +141,53 @@ document.getElementById('again').addEventListener("click", function () {
 })
 
 
+function incorrectYellow() {
+    if (arrayGreen.includes(inputYellow.value)) {
+        explication.innerHTML = "Faux," + " " + inputYellow.value + " " + "vas dans la poubelle verte !";
+    }
+    if (arrayBlue.includes(inputYellow.value)) {
+        explication.innerHTML = "Faux," + " " + inputYellow.value + " " + "vas dans la poubelle bleue !";
+    }
+    if (arrayBrown.includes(inputYellow.value)) {
+        explication.innerHTML = "Faux," + " " + inputYellow.value + " " + "vas dans la poubelle brune !";
+    }
+}
 
+function incorrectGreen() {
+    if (arrayYellow.includes(inputGreen.value)) {
+        explication.innerHTML = "Faux," + " " + inputGreen.value + " " + "vas dans la poubelle jaune !";
+    }
+    if (arrayBlue.includes(inputGreen.value)) {
+        explication.innerHTML = "Faux," + " " + inputGreen.value + " " + "vas dans la poubelle bleue !";
+    }
+    if (arrayBrown.includes(inputGreen.value)) {
+        explication.innerHTML = "Faux," + " " + inputGreen.value + " " + "vas dans la poubelle brune !";
+    }
+}
+
+function incorrectBlue() {
+    if (arrayGreen.includes(inputBlue.value)) {
+        explication.innerHTML = "Faux," + " " + inputBlue.value + " " + "vas dans la poubelle verte !";
+    }
+    if (arrayYellow.includes(inputBlue.value)) {
+        explication.innerHTML = "Faux," + " " + inputBlue.value + " " + "vas dans la poubelle jaune !";
+    }
+    if (arrayBrown.includes(inputBlue.value)) {
+        explication.innerHTML = "Faux," + " " + inputBlue.value + " " + "vas dans la poubelle brune !";
+    }
+}
+
+function incorrectBrown() {
+    if (arrayYellow.includes(inputBrown.value)) {
+        explication.innerHTML = "Faux," + " " + inputBrown.value + " " + "vas dans la poubelle jaune !";
+    }
+    if (arrayBlue.includes(inputBrown.value)) {
+        explication.innerHTML = "Faux," + " " + inputBrown.value + " " + "vas dans la poubelle bleue !";
+    }
+    if (arrayGreen.includes(inputBrown.value)) {
+        explication.innerHTML = "Faux," + " " + inputBrown.value + " " + "vas dans la poubelle verte !";
+    }
+}
 
 
 

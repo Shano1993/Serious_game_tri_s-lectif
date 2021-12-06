@@ -14,10 +14,18 @@
 
         <div id="waste">
 
-            <h2>Les déchets</h2>
+            <div id="rule">
+                <h2>Règlement</h2>
+                <p id="rules">
+                    Le but du jeu est de placer correctement les déchets qui défile à l'écran dans la bonne poubelle,
+                    pour ce faire, entrer le mot correctement écris dans un des emplacements prévu et puis cliquer sur
+                    "mettre dans la poubelle". Bonne chance !
+                </p>
+            </div>
 
-            <div class ="waste_item"></div>
+            <div class ="waste_item">
 
+            </div>
 
         </div>
 
@@ -27,7 +35,7 @@
 
             <div id="trashcan_yellow" class="transhcans">
                 <i class="fas fa-trash" id="yellow"></i>
-                <p class="name">Poubelle PMC</p>
+                <p class="name">PMC</p>
                 <label>
                     <input type="text" id="inputYellow">
                 </label>
@@ -35,7 +43,7 @@
 
             <div id="trashcan_green" class="transhcans">
                 <i class="fas fa-trash" id="green"></i>
-                <p class="name">Poubelle Verre</p>
+                <p class="name">Verre</p>
                 <label>
                     <input type="text" id="inputGreen">
                 </label>
@@ -43,7 +51,7 @@
 
             <div id="trashcan_blue" class="transhcans">
                 <i class="fas fa-trash" id="blue"></i>
-                <p class="name">Poubelle Papier</p>
+                <p class="name">Papier</p>
                 <label>
                     <input type="text" id="inputBlue">
                 </label>
@@ -51,7 +59,7 @@
 
             <div id="trashcan_brown" class="transhcans">
                 <i class="fas fa-trash" id="brown"></i>
-                <p class="name">Poubelle ménagère</p>
+                <p class="name">Ménagère</p>
                 <label>
                     <input type="text" id="inputBrown">
                 </label>
@@ -64,10 +72,9 @@
         <div id="comment">
 
             <h2>Commentaires</h2>
-            <p>Score : <span id="score">0</span></p>
-            <p>Nombre de fautes : <span id="false">0</span></p>
-            <p id="explication"></p>
-
+            <p class="comments">Score : <span id="score"></span></p>
+            <p class="comments">Nombre de fautes : <span id="false"></span></p>
+            <p id="explication"  class="comments"></p>
 
         </div>
 
