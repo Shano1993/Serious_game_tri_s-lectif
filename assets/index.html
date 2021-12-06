@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Serious game, tri séléctif</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Tri séléctif</h1>
+
+    <div id="game">
+
+        <div id="waste">
+
+            <h2>Les déchets</h2>
+
+            <div class ="waste_item"></div>
+
+
+        </div>
+
+        <div id="trashcan">
+
+            <h2>Les poubelles</h2>
+
+            <div id="trashcan_yellow" class="transhcans">
+                <i class="fas fa-trash" id="yellow"></i>
+                <p class="name">Poubelle PMC</p>
+                <label>
+                    <input type="text" id="inputYellow">
+                </label>
+            </div>
+
+            <div id="trashcan_green" class="transhcans">
+                <i class="fas fa-trash" id="green"></i>
+                <p class="name">Poubelle Verre</p>
+                <label>
+                    <input type="text" id="inputGreen">
+                </label>
+            </div>
+
+            <div id="trashcan_blue" class="transhcans">
+                <i class="fas fa-trash" id="blue"></i>
+                <p class="name">Poubelle Papier</p>
+                <label>
+                    <input type="text" id="inputBlue">
+                </label>
+            </div>
+
+            <div id="trashcan_brown" class="transhcans">
+                <i class="fas fa-trash" id="brown"></i>
+                <p class="name">Poubelle ménagère</p>
+                <label>
+                    <input type="text" id="inputBrown">
+                </label>
+            </div>
+
+        </div>
+
+        <button id="button">Mettre dans la poubelle</button>
+
+        <div id="comment">
+
+            <h2>Commentaires</h2>
+            <p>Score : <span id="score">0</span></p>
+            <p>Nombre de fautes : <span id="false">0</span></p>
+            <p id="explication"></p>
+
+
+        </div>
+
+    </div>
+
+    <p id="won"></p>
+    <button id="again">Recommencer</button>
+
+    <script src="js/app.js"></script>
+    <script src="https://kit.fontawesome.com/84aafb4cd1.js" crossorigin="anonymous"></script>
+</body>
+</html>
